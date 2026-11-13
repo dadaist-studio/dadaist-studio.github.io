@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حمایت از گنجدان | گنجدان</title>
+<meta name="description" content="گنجدان رایگان و بی‌آگهی است؛ با حمایت شما زنده می‌ماند.">
+<meta property="og:title" content="حمایت از گنجدان">
+<meta property="og:description" content="گنجدان رایگان و بی‌آگهی است؛ با حمایت شما زنده می‌ماند.">
+<meta property="og:image" content="https://ganjdan.app/img/icon-192.png">
+<link rel="icon" href="img/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="./" aria-label="گنجدان"><img src="img/mark.svg" alt="گنجدان"></a>
+  <nav><a href="./">خانه</a><a href="features.html">امکانات</a><a href="install.html">نصب</a><a href="https://ganjdan.app/ganjdan-web/">در مرورگر</a><a href="support.html">حمایت</a><a href="about.html">دربارهٔ ما</a><a href="blog/">یادداشت‌ها</a></nav>
+</header>
+<main>
+
+<h1>حمایت از گنجدان</h1>
+<p class="lead">گنجدان رایگان است، آگهی ندارد و هیچ‌وقت چیزی را پشت پرداخت قفل نمی‌کند. ولی ساختن و نگه داشتنش هزینه دارد.</p>
+<div class="card">
+<h3>هزینه‌های امسال</h3>
+<ul>
+<li>دامنهٔ ganjdan.app: ۱۴ دلار در سال</li>
+<li>حساب توسعه‌دهندهٔ اپل (برای اپ‌استور): ۹۹ دلار در سال</li>
+<li>حساب گوگل پلی: ۲۵ دلار، یک‌بار</li>
+</ul>
+<p>هرچه حمایت زودتر جمع شود، گنجدان زودتر به اپ‌استور و گوگل پلی می‌رسد. با ۹۹ دلار حساب اپل باز می‌شود و نسخهٔ آیفون در اپ‌استور می‌نشیند؛ بقیه صرف چهرهٔ شاعران و دیوان‌های تازه می‌شود.</p>
+</div>
+<p style="text-align:center"><a class="btn" href="https://ko-fi.com/ganjdan">برایم یک قهوه بخر</a></p>
+<h2>راه‌های دیگر، بی‌هزینه</h2>
+<ul>
+<li>گنجدان را به دوستانتان معرفی کنید؛ هر نصب تازه ما را به اپ‌استور نزدیک‌تر می‌کند.</li>
+<li>در شبکه‌های اجتماعی بنویسید که از کدام شعر یا امکان آن خوشتان آمده.</li>
+<li>یک بیت را از خود اپ به شکل تصویر بفرستید.</li>
+<li>اشکالی دیدید یا پیشنهادی دارید؟ بنویسید: <a href="mailto:hello@ganjdan.app">hello@ganjdan.app</a></li>
+</ul>
+<h2>حامیان گنجدان</h2>
+<p>سپاس از کسانی که گنجدان را زنده نگه داشته‌اند. نام هر حامی، اگر بخواهد، با مبلغ حمایتش اینجا می‌آید: پس از حمایت، نامتان را به <a href="mailto:hello@ganjdan.app">hello@ganjdan.app</a> بنویسید.</p>
+<p class="post-meta">هنوز نامی نیست؛ نخستین نام می‌تواند نام شما باشد.</p>
+<h2 id="stats" style="text-align:center">گنجدان تا امروز</h2>
+<div class="grid">
+  <div class="card"><h3 id="st-iphone">۲۲۷</h3><p>نصب روی آیفون</p></div>
+  <div class="card"><h3 id="st-android">۵۲۹</h3><p>نصب روی اندروید</p></div>
+  <div class="card"><h3 id="st-online">۷٬۱۴۹</h3><p>بازدید آنلاین</p></div>
+</div>
+<script>
+// Live, exact counts from GoatCounter. Installs: first home-screen launch per device; online: site pages + the
+// web app opened in a browser (both counted by tools/deploy-web.sh and this page). A count that can't be read stays "…".
+(() => {
+  const gc = (p) => fetch('https://mrkamyar.goatcounter.com/counter/' + p + '.json')
+    .then((r) => (r.status === 404 ? { count: '0' } : r.json()))
+    .then((j) => Number(String(j.count).replace(/\D/g, '')));
+  const show = (id, ...paths) => Promise.all(paths.map(gc))
+    .then((ns) => { document.getElementById(id).textContent = ns.reduce((a, b) => a + b, 0).toLocaleString('fa-IR'); }, () => {});
+  show('st-iphone', 'install-iphone');
+  show('st-android', 'install-android'); // shortcut: Google Play installs not included, add them once the app is on Play
+  show('st-online', 'site', 'app');
+})();
+</script>
+</main>
+<footer>
+  <p>گنجدان را استودیو دادائیست از سر مهر به ایران و زبان پارسی ساخته است.</p>
+  <p>متن شعرها از داده‌های آزاد <a href="https://ganjoor.net">گنجور</a> است. تعبیر فال از «دیتابیس فال حافظ» اثر محمود اسکندری (GPL‑3.0). نقش‌های ساسانی از کتابخانهٔ ایرانشهر (ناردون). معنی واژه‌ها از <a href="https://fa.wiktionary.org">ویکی‌واژهٔ فارسی</a> (CC BY-SA 4.0). «فردوسی‌خوانی» از <a href="https://majera.xyz/podcasts/ferdowsikhani/">پادکست ماجرا</a>.</p>
+  <p><a href="privacy.html">سیاست حریم خصوصی</a></p>
+  <p>اگر حق نشر اثری از آنِ شماست و با بودنش در گنجدان موافق نیستید، بنویسید تا برداریم: <a href="mailto:hello@ganjdan.app">hello@ganjdan.app</a></p>
+</footer>
+<script>window.goatcounter = { path: 'site', title: location.pathname };</script>
+<script data-goatcounter="https://mrkamyar.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
